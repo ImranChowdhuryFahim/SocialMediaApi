@@ -7,11 +7,16 @@ const mongoose = require('mongoose');
 // eslint-disable-next-line no-unused-vars
 const dotenv = require('dotenv').config();
 
+const cors = require('cors');
+
 const userRouter = require('./Routes/User');
 
 const app = express();
 
 const port = process.env.PORT || 5000;
+
+app.use(cors());
+app.options('*', cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
