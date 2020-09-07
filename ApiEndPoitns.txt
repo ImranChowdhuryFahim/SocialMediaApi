@@ -1,0 +1,3 @@
+Login : http://localhost:5000/api/login method : POST payload: { email , password }
+Register : http://localhost:5000/api/register method: POST  payload : { firstname, lastname, email, password}
+GetAllUsers : http://localhost:5000/api/getAllusers method: GET
